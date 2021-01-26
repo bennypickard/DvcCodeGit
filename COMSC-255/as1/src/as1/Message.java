@@ -7,7 +7,10 @@ public class Message {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String msg;
-		msg = "Hi\n";
+		msg = "Today is a good day\n";
+		msg = msg + "I am learning Java programming.\n";
+		msg = msg + "It's a lot of fun.\n";
+		
 		JOptionPane.showMessageDialog(null, msg);
 	}
 
