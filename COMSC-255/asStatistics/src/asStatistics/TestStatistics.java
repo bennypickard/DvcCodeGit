@@ -6,6 +6,15 @@ import javax.swing.JOptionPane;
 
 
 public class TestStatistics {
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 		// This method tests the Statistics class and calls each of its functions on an array
@@ -106,7 +115,7 @@ public class TestStatistics {
         {//loop thru original data list.
         	out = out + origData [i] + " ";
         }
-        out += "\n";//newline
+        out += "\n\nResults Using Instance Methods\n\n";//newline
 
         //Add sorted data to output
         out = out + "Sorted Data: \n";
@@ -114,7 +123,7 @@ public class TestStatistics {
         {//loop thru sorted data list.
         	out = out + sortData [i] + " ";
         }
-        out += "\n\nComputed Values Displayed to " + placesCount + " Decimal Places\n";//Title Line
+        out += "\n\nComputed Values:\n";
         
         //value output
         out += "Min Value: " + df.format(min) + "\n";
@@ -122,6 +131,36 @@ public class TestStatistics {
         out += "Mean: " + df.format(mean) + "\n";
         out += "Median: " + df.format(median) + "\n";
 
+        //[][]STATIC RESULTS
+        double min2 = Statistics.computeMin(data);
+        double max2 = Statistics.computeMax(data);
+        double mean2 = Statistics.computeMean(data);
+        double median2 = Statistics.computeMedian(data);
+        double [] sortData2 = Statistics.computeSortedData(data);
+        
+
+        
+        out += "\nResults Using Static Methods:";
+        		
+        //Add sorted data to output
+        out +=  "\n\nSorted Data: \n";
+        for (int i = 0 ; i < sortData2.length ; i ++)
+        {//loop thru sorted data list.
+        	out = out + sortData2 [i] + " ";
+        }
+        
+        out += "\n\nComputed Values:\n";
+        out += "Min: " + df.format(min2) + "\n";
+        out += "Max: " + df.format(max2) + "\n";
+        out += "Mean: " + df.format(mean2) + "\n";
+        out += "Median: " + df.format(median2) + "\n";
+        
+        //get value of static variable count
+        int instanceCount = Statistics.count;
+        
+        out += "\nThe Total Number of Statistics objects created during execution:\n";
+        out += instanceCount + "\n";
+        
         
 		//Deliver output
         JOptionPane.showMessageDialog ( null, out);

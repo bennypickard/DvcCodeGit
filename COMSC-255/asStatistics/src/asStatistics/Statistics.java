@@ -10,9 +10,15 @@ public class Statistics {
 	private double [] data;
 	private double [] sdata;
 	
+	//static variable count
+	public static int count = 0;
+	
 	//constructor
 	public Statistics(double [] d)
 	{
+		//increment static variable count
+		count = count + 1;
+		
 		//clone the array right away
 		data = d.clone();
 		sdata = d.clone();
@@ -81,6 +87,61 @@ public class Statistics {
 		double [] d = sdata.clone();
 		return d;
 	}
+	
+	
+	//static methods
+	
+	public static double computeMin(double[] data)
+	{
+		//create new Statistics object
+		Statistics st = new Statistics (data);
+		//find min
+		double min = st.findMin();
+		
+		//Statistics object is destroyed
+		return min;
+	}
+	public static double computeMax(double[] data)
+	{
+		//create new Statistics object
+		Statistics st = new Statistics (data);
+		//find min
+		double n = st.findMax();
+		
+		//Statistics object is destroyed
+		return n;
+	}
+	public static double computeMean(double[] data)
+	{
+		//create new Statistics object
+		Statistics st = new Statistics (data);
+		//find min
+		double n = st.findMean();
+		
+		//Statistics object is destroyed
+		return n;
+	}
+	public static double computeMedian(double[] data)
+	{
+		//create new Statistics object
+		Statistics st = new Statistics (data);
+		//find min
+		double n = st.findMedian();
+		
+		//Statistics object is destroyed
+		return n;
+	}
+	public static double [] computeSortedData(double[] data)
+	{
+		//create new Statistics object
+		Statistics st = new Statistics (data);
+		//find min
+		double [] n = st.getSortedData();
+		
+		//Statistics object is destroyed
+		return n;
+	}
+	
 	
 	
 	
