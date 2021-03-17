@@ -62,11 +62,12 @@ public class Day {
 		return dayNum;
 	}
 	
+	
+	//[][][]ACCESSORS[][][]
 	public int getDay()
 	{
 		return day;
 	}
-	
 	public int getMonth()
 	{
 		return month;

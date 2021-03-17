@@ -9,7 +9,7 @@ public class TestDay {
 		
 		//[][][]VARIABLES[][][]
 		String in, out;
-		int day, month,dayNumber;
+		int day, month, year, dayNumber;
 		
 		
 		//[][][]INPUT[][][]
@@ -17,15 +17,17 @@ public class TestDay {
 		day = Integer.parseInt(in);
 		in = JOptionPane.showInputDialog("Enter month");
 		month = Integer.parseInt(in);
+		in = JOptionPane.showInputDialog("Enter year");
+		year = Integer.parseInt(in);
 		
 		//[]CREATE OBJECT[]
-		Day epoch = new Day(day, month);
+		Day epoch = new LeapDay(day, month, year);
 		
 		//[]GET DAYNUMBER[]
 		dayNumber = epoch.findDayNum();
 		
 		//[][][]OUTPUT[][][]
-		out = "Day Number for " + month + "/" + day + " is " + dayNumber;
+		out = "Day Number for " + month + "/" + day + "/" + year + " is " + dayNumber;
 		JOptionPane.showMessageDialog(null, out);
 		
 		
