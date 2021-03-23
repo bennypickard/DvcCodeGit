@@ -17,6 +17,7 @@ public class Student {
 	}
 	
 	//methods
+	/*
 	public String findGrade(){
 		String grade = "";
 		double sum = 0;
@@ -51,6 +52,7 @@ public class Student {
 		//return grade letter string
 		return grade;
 	}
+	*/
 	public int getId() {
 		return id;
 	}
